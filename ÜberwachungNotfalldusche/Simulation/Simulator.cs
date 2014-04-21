@@ -19,6 +19,13 @@ namespace Simulation
         {
             InitializeComponent();
             notfallduschen = new List<Notfalldusche>();
+
+            notfallduschen.Add(new Standdusche());
+            notfallduschen.Add(new Duschkabine());
+            notfallduschen.Add(new Standdusche());
+            notfallduschen.Add(new Duschkabine());
+
+            aktualisiereDuschenliste();
         }
 
         public List<Notfalldusche> getAllShowers()
@@ -67,6 +74,7 @@ namespace Simulation
                 showWassertemperatur.Text = barWassertemperatur.Value.ToString();
                 ckAugendusche.Checked = selektion.schalterAugendusche;
                 ckGanzkörperdusche.Checked = selektion.schalterDusche;
+                ckErreichbarkeit.Checked = selektion.erreichbarkeit;
 
                 if (selektion is Duschkabine)
                 {

@@ -35,37 +35,40 @@
             this.barFlussrate = new System.Windows.Forms.TrackBar();
             this.lbl_flussrate = new System.Windows.Forms.Label();
             this.pl_Flussrate = new System.Windows.Forms.Panel();
+            this.showFlussrate = new System.Windows.Forms.Label();
             this.pl_Wasserdruck = new System.Windows.Forms.Panel();
             this.barWasserdruck = new System.Windows.Forms.TrackBar();
             this.lbl_Wasserdruck = new System.Windows.Forms.Label();
+            this.showWasserdruck = new System.Windows.Forms.Label();
             this.pl_Wassertemperatur = new System.Windows.Forms.Panel();
             this.barWassertemperatur = new System.Windows.Forms.TrackBar();
             this.lbl_Wassertemperatur = new System.Windows.Forms.Label();
+            this.showWassertemperatur = new System.Windows.Forms.Label();
             this.pl_Umgebungstemperatur = new System.Windows.Forms.Panel();
             this.barUmgebungstemperatur = new System.Windows.Forms.TrackBar();
             this.lbl_Umgebungstemperatur = new System.Windows.Forms.Label();
+            this.showUmgebungstemperatur = new System.Windows.Forms.Label();
             this.pl_Wasserstand = new System.Windows.Forms.Panel();
             this.barWasserstand = new System.Windows.Forms.TrackBar();
             this.lbl_Wasserstand = new System.Windows.Forms.Label();
+            this.showWasserstand = new System.Windows.Forms.Label();
             this.pl_Tankwassertemperatur = new System.Windows.Forms.Panel();
             this.barTankwassertemperatur = new System.Windows.Forms.TrackBar();
             this.lbl_Tankwassertemperatur = new System.Windows.Forms.Label();
+            this.showTankwassertemperatur = new System.Windows.Forms.Label();
             this.pl_Lichtsensor = new System.Windows.Forms.Panel();
-            this.lbl_Lichtsensor = new System.Windows.Forms.Label();
             this.ckLichtsensor = new System.Windows.Forms.CheckBox();
+            this.lbl_Lichtsensor = new System.Windows.Forms.Label();
             this.pl_Augendusche = new System.Windows.Forms.Panel();
             this.ckAugendusche = new System.Windows.Forms.CheckBox();
             this.lbl_Augendusche = new System.Windows.Forms.Label();
             this.pl_Ganzkörperdusche = new System.Windows.Forms.Panel();
             this.ckGanzkörperdusche = new System.Windows.Forms.CheckBox();
             this.lbl_Ganzkörperdusche = new System.Windows.Forms.Label();
-            this.showFlussrate = new System.Windows.Forms.Label();
-            this.showWasserdruck = new System.Windows.Forms.Label();
-            this.showWassertemperatur = new System.Windows.Forms.Label();
-            this.showUmgebungstemperatur = new System.Windows.Forms.Label();
-            this.showWasserstand = new System.Windows.Forms.Label();
-            this.showTankwassertemperatur = new System.Windows.Forms.Label();
             this.pl_einstellungen = new System.Windows.Forms.Panel();
+            this.pl_Erreichbarkeit = new System.Windows.Forms.Panel();
+            this.ckErreichbarkeit = new System.Windows.Forms.CheckBox();
+            this.lbl_Erreichbarkeit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barFlussrate)).BeginInit();
             this.pl_Flussrate.SuspendLayout();
             this.pl_Wasserdruck.SuspendLayout();
@@ -82,6 +85,7 @@
             this.pl_Augendusche.SuspendLayout();
             this.pl_Ganzkörperdusche.SuspendLayout();
             this.pl_einstellungen.SuspendLayout();
+            this.pl_Erreichbarkeit.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_duschenliste
@@ -153,6 +157,16 @@
             this.pl_Flussrate.Size = new System.Drawing.Size(373, 38);
             this.pl_Flussrate.TabIndex = 6;
             // 
+            // showFlussrate
+            // 
+            this.showFlussrate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showFlussrate.Location = new System.Drawing.Point(327, 0);
+            this.showFlussrate.Name = "showFlussrate";
+            this.showFlussrate.Size = new System.Drawing.Size(46, 38);
+            this.showFlussrate.TabIndex = 6;
+            this.showFlussrate.Text = "-";
+            this.showFlussrate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pl_Wasserdruck
             // 
             this.pl_Wasserdruck.Controls.Add(this.barWasserdruck);
@@ -182,6 +196,16 @@
             this.lbl_Wasserdruck.Size = new System.Drawing.Size(70, 13);
             this.lbl_Wasserdruck.TabIndex = 5;
             this.lbl_Wasserdruck.Text = "Wasserdruck";
+            // 
+            // showWasserdruck
+            // 
+            this.showWasserdruck.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showWasserdruck.Location = new System.Drawing.Point(327, 0);
+            this.showWasserdruck.Name = "showWasserdruck";
+            this.showWasserdruck.Size = new System.Drawing.Size(46, 38);
+            this.showWasserdruck.TabIndex = 7;
+            this.showWasserdruck.Text = "-";
+            this.showWasserdruck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pl_Wassertemperatur
             // 
@@ -214,6 +238,16 @@
             this.lbl_Wassertemperatur.TabIndex = 5;
             this.lbl_Wassertemperatur.Text = "Wassertemperatur";
             // 
+            // showWassertemperatur
+            // 
+            this.showWassertemperatur.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showWassertemperatur.Location = new System.Drawing.Point(327, 0);
+            this.showWassertemperatur.Name = "showWassertemperatur";
+            this.showWassertemperatur.Size = new System.Drawing.Size(46, 38);
+            this.showWassertemperatur.TabIndex = 7;
+            this.showWassertemperatur.Text = "-";
+            this.showWassertemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pl_Umgebungstemperatur
             // 
             this.pl_Umgebungstemperatur.Controls.Add(this.barUmgebungstemperatur);
@@ -245,6 +279,16 @@
             this.lbl_Umgebungstemperatur.TabIndex = 5;
             this.lbl_Umgebungstemperatur.Text = "Umgebungstemperatur";
             // 
+            // showUmgebungstemperatur
+            // 
+            this.showUmgebungstemperatur.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showUmgebungstemperatur.Location = new System.Drawing.Point(327, 0);
+            this.showUmgebungstemperatur.Name = "showUmgebungstemperatur";
+            this.showUmgebungstemperatur.Size = new System.Drawing.Size(46, 38);
+            this.showUmgebungstemperatur.TabIndex = 7;
+            this.showUmgebungstemperatur.Text = "-";
+            this.showUmgebungstemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pl_Wasserstand
             // 
             this.pl_Wasserstand.Controls.Add(this.barWasserstand);
@@ -274,6 +318,16 @@
             this.lbl_Wasserstand.Size = new System.Drawing.Size(69, 13);
             this.lbl_Wasserstand.TabIndex = 5;
             this.lbl_Wasserstand.Text = "Wasserstand";
+            // 
+            // showWasserstand
+            // 
+            this.showWasserstand.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showWasserstand.Location = new System.Drawing.Point(327, 0);
+            this.showWasserstand.Name = "showWasserstand";
+            this.showWasserstand.Size = new System.Drawing.Size(46, 38);
+            this.showWasserstand.TabIndex = 7;
+            this.showWasserstand.Text = "-";
+            this.showWasserstand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pl_Tankwassertemperatur
             // 
@@ -306,6 +360,16 @@
             this.lbl_Tankwassertemperatur.TabIndex = 5;
             this.lbl_Tankwassertemperatur.Text = "Tankwassertemperatur";
             // 
+            // showTankwassertemperatur
+            // 
+            this.showTankwassertemperatur.Dock = System.Windows.Forms.DockStyle.Right;
+            this.showTankwassertemperatur.Location = new System.Drawing.Point(327, 0);
+            this.showTankwassertemperatur.Name = "showTankwassertemperatur";
+            this.showTankwassertemperatur.Size = new System.Drawing.Size(46, 38);
+            this.showTankwassertemperatur.TabIndex = 7;
+            this.showTankwassertemperatur.Text = "-";
+            this.showTankwassertemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pl_Lichtsensor
             // 
             this.pl_Lichtsensor.Controls.Add(this.ckLichtsensor);
@@ -314,16 +378,6 @@
             this.pl_Lichtsensor.Name = "pl_Lichtsensor";
             this.pl_Lichtsensor.Size = new System.Drawing.Size(172, 38);
             this.pl_Lichtsensor.TabIndex = 12;
-            // 
-            // lbl_Lichtsensor
-            // 
-            this.lbl_Lichtsensor.AutoSize = true;
-            this.lbl_Lichtsensor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_Lichtsensor.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Lichtsensor.Name = "lbl_Lichtsensor";
-            this.lbl_Lichtsensor.Size = new System.Drawing.Size(99, 13);
-            this.lbl_Lichtsensor.TabIndex = 5;
-            this.lbl_Lichtsensor.Text = "Lichtsensor reagiert";
             // 
             // ckLichtsensor
             // 
@@ -334,6 +388,16 @@
             this.ckLichtsensor.TabIndex = 6;
             this.ckLichtsensor.UseVisualStyleBackColor = true;
             this.ckLichtsensor.CheckedChanged += new System.EventHandler(this.ckLichtsensor_CheckedChanged);
+            // 
+            // lbl_Lichtsensor
+            // 
+            this.lbl_Lichtsensor.AutoSize = true;
+            this.lbl_Lichtsensor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_Lichtsensor.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Lichtsensor.Name = "lbl_Lichtsensor";
+            this.lbl_Lichtsensor.Size = new System.Drawing.Size(99, 13);
+            this.lbl_Lichtsensor.TabIndex = 5;
+            this.lbl_Lichtsensor.Text = "Lichtsensor reagiert";
             // 
             // pl_Augendusche
             // 
@@ -393,68 +457,9 @@
             this.lbl_Ganzkörperdusche.TabIndex = 5;
             this.lbl_Ganzkörperdusche.Text = "Ganzkörperdusche läuft";
             // 
-            // showFlussrate
-            // 
-            this.showFlussrate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showFlussrate.Location = new System.Drawing.Point(327, 0);
-            this.showFlussrate.Name = "showFlussrate";
-            this.showFlussrate.Size = new System.Drawing.Size(46, 38);
-            this.showFlussrate.TabIndex = 6;
-            this.showFlussrate.Text = "-";
-            this.showFlussrate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showWasserdruck
-            // 
-            this.showWasserdruck.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showWasserdruck.Location = new System.Drawing.Point(327, 0);
-            this.showWasserdruck.Name = "showWasserdruck";
-            this.showWasserdruck.Size = new System.Drawing.Size(46, 38);
-            this.showWasserdruck.TabIndex = 7;
-            this.showWasserdruck.Text = "-";
-            this.showWasserdruck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showWassertemperatur
-            // 
-            this.showWassertemperatur.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showWassertemperatur.Location = new System.Drawing.Point(327, 0);
-            this.showWassertemperatur.Name = "showWassertemperatur";
-            this.showWassertemperatur.Size = new System.Drawing.Size(46, 38);
-            this.showWassertemperatur.TabIndex = 7;
-            this.showWassertemperatur.Text = "-";
-            this.showWassertemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showUmgebungstemperatur
-            // 
-            this.showUmgebungstemperatur.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showUmgebungstemperatur.Location = new System.Drawing.Point(327, 0);
-            this.showUmgebungstemperatur.Name = "showUmgebungstemperatur";
-            this.showUmgebungstemperatur.Size = new System.Drawing.Size(46, 38);
-            this.showUmgebungstemperatur.TabIndex = 7;
-            this.showUmgebungstemperatur.Text = "-";
-            this.showUmgebungstemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showWasserstand
-            // 
-            this.showWasserstand.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showWasserstand.Location = new System.Drawing.Point(327, 0);
-            this.showWasserstand.Name = "showWasserstand";
-            this.showWasserstand.Size = new System.Drawing.Size(46, 38);
-            this.showWasserstand.TabIndex = 7;
-            this.showWasserstand.Text = "-";
-            this.showWasserstand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showTankwassertemperatur
-            // 
-            this.showTankwassertemperatur.Dock = System.Windows.Forms.DockStyle.Right;
-            this.showTankwassertemperatur.Location = new System.Drawing.Point(327, 0);
-            this.showTankwassertemperatur.Name = "showTankwassertemperatur";
-            this.showTankwassertemperatur.Size = new System.Drawing.Size(46, 38);
-            this.showTankwassertemperatur.TabIndex = 7;
-            this.showTankwassertemperatur.Text = "-";
-            this.showTankwassertemperatur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pl_einstellungen
             // 
+            this.pl_einstellungen.Controls.Add(this.pl_Erreichbarkeit);
             this.pl_einstellungen.Controls.Add(this.pl_Flussrate);
             this.pl_einstellungen.Controls.Add(this.pl_Ganzkörperdusche);
             this.pl_einstellungen.Controls.Add(this.pl_Wasserdruck);
@@ -469,6 +474,34 @@
             this.pl_einstellungen.Size = new System.Drawing.Size(387, 408);
             this.pl_einstellungen.TabIndex = 15;
             this.pl_einstellungen.Visible = false;
+            // 
+            // pl_Erreichbarkeit
+            // 
+            this.pl_Erreichbarkeit.Controls.Add(this.ckErreichbarkeit);
+            this.pl_Erreichbarkeit.Controls.Add(this.lbl_Erreichbarkeit);
+            this.pl_Erreichbarkeit.Location = new System.Drawing.Point(204, 154);
+            this.pl_Erreichbarkeit.Name = "pl_Erreichbarkeit";
+            this.pl_Erreichbarkeit.Size = new System.Drawing.Size(172, 38);
+            this.pl_Erreichbarkeit.TabIndex = 15;
+            // 
+            // ckErreichbarkeit
+            // 
+            this.ckErreichbarkeit.AutoSize = true;
+            this.ckErreichbarkeit.Location = new System.Drawing.Point(19, 16);
+            this.ckErreichbarkeit.Name = "ckErreichbarkeit";
+            this.ckErreichbarkeit.Size = new System.Drawing.Size(15, 14);
+            this.ckErreichbarkeit.TabIndex = 6;
+            this.ckErreichbarkeit.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Erreichbarkeit
+            // 
+            this.lbl_Erreichbarkeit.AutoSize = true;
+            this.lbl_Erreichbarkeit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_Erreichbarkeit.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Erreichbarkeit.Name = "lbl_Erreichbarkeit";
+            this.lbl_Erreichbarkeit.Size = new System.Drawing.Size(96, 13);
+            this.lbl_Erreichbarkeit.TabIndex = 5;
+            this.lbl_Erreichbarkeit.Text = "Augendusche läuft";
             // 
             // Simulator
             // 
@@ -510,6 +543,8 @@
             this.pl_Ganzkörperdusche.ResumeLayout(false);
             this.pl_Ganzkörperdusche.PerformLayout();
             this.pl_einstellungen.ResumeLayout(false);
+            this.pl_Erreichbarkeit.ResumeLayout(false);
+            this.pl_Erreichbarkeit.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -554,6 +589,9 @@
         private System.Windows.Forms.Label showWasserstand;
         private System.Windows.Forms.Label showTankwassertemperatur;
         private System.Windows.Forms.Panel pl_einstellungen;
+        private System.Windows.Forms.Panel pl_Erreichbarkeit;
+        private System.Windows.Forms.CheckBox ckErreichbarkeit;
+        private System.Windows.Forms.Label lbl_Erreichbarkeit;
     }
 }
 

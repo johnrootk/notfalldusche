@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ÜberwachungNotfalldusche.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Detailansicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detailansicht.Designer.cs">
+      <DependentUpon>Detailansicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="ÜberwachungHauptseite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Detailansicht.resx">
+      <DependentUpon>Detailansicht.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ÜberwachungHauptseite.resx">
       <DependentUpon>ÜberwachungHauptseite.cs</DependentUpon>
     </EmbeddedResource>
@@ -63,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,6 +95,12 @@
       <Project>{8bb26417-078b-4e9b-a4c7-82910217a2ea}</Project>
       <Name>Simulation</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duschkabine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standdusche.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

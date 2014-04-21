@@ -16,6 +16,8 @@ namespace Simulation
         public Boolean schalterAugendusche;
         public Boolean schalterDusche;
 
+        public Boolean erreichbarkeit;
+
         public Notfalldusche()
         {
             rand = new Random();
@@ -24,6 +26,7 @@ namespace Simulation
             wassertemperatur = 20;
             schalterAugendusche = false;
             schalterDusche = false;
+            erreichbarkeit = true;
         }
 
         public override string ToString()
