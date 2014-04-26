@@ -63,9 +63,29 @@ namespace ÜberwachungNotfalldusche.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Collapse {
+            get {
+                object obj = ResourceManager.GetObject("Collapse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap duschkabine {
             get {
                 object obj = ResourceManager.GetObject("duschkabine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Expand {
+            get {
+                object obj = ResourceManager.GetObject("Expand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11,6 +11,7 @@
     <AssemblyName>ÜberwachungNotfalldusche</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ExpressionBlendVersion>12.0.41002.1</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,8 +36,12 @@
     <StartupObject>ÜberwachungNotfalldusche.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,27 +50,50 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accordion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accordion.Designer.cs">
+      <DependentUpon>Accordion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detailansicht.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Detailansicht.Designer.cs">
       <DependentUpon>Detailansicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="ÜberwachungHauptseite.cs">
+    <Compile Include="Hauptansicht.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ÜberwachungHauptseite.Designer.cs">
-      <DependentUpon>ÜberwachungHauptseite.cs</DependentUpon>
+    <Compile Include="Hauptansicht.Designer.cs">
+      <DependentUpon>Hauptansicht.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testansicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testansicht.Designer.cs">
+      <DependentUpon>Testansicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expander.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Expander.Designer.cs">
+      <DependentUpon>Expander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warning.cs" />
+    <Compile Include="WarningComparer.cs" />
     <EmbeddedResource Include="Detailansicht.resx">
       <DependentUpon>Detailansicht.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ÜberwachungHauptseite.resx">
-      <DependentUpon>ÜberwachungHauptseite.cs</DependentUpon>
+    <EmbeddedResource Include="Hauptansicht.resx">
+      <DependentUpon>Hauptansicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +105,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Testansicht.resx">
+      <DependentUpon>Testansicht.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\standdusche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,32 +11,59 @@ using Simulation;
 
 namespace ÜberwachungNotfalldusche
 {
-    public partial class Detailansicht : Form
+  public partial class Detailansicht : Form
+  {
+    Notfalldusche shower;
+
+    public Detailansicht(Notfalldusche shower)
     {
-        Notfalldusche dusche;
-
-        public Detailansicht(Notfalldusche dusche)
-        {
-            InitializeComponent();
-            this.dusche = dusche;
-            zeigeWerte();
-            refreshTimer.Start();
-        }
-
-        public void zeigeWerte(){
-            lbl_Name.Text = dusche.name;
-            pb_Image.Image = (dusche is Duschkabine) ? ÜberwachungNotfalldusche.Properties.Resources.duschkabine : ÜberwachungNotfalldusche.Properties.Resources.standdusche;
-            aktualisiereWerte();
-        }
-
-        public void aktualisiereWerte()
-        {
-            lbl_Wassertemperatur.Text = dusche.wassertemperatur.ToString();
-        }
-
-        private void refreshTimer_Tick(object sender, EventArgs e)
-        {
-            aktualisiereWerte();
-        }
+      InitializeComponent();
+      this.shower = shower;
+      initializeGUI();
+      refreshTimer.Start();
     }
+
+    /// <summary>
+    /// Startet die ersten Werte welche nicht regelmässig aktualisiert werden und ruft 
+    /// anschliessend die update-Funktion auf
+    /// </summary>
+    public void initializeGUI()
+    {
+      lbl_Name.Text = shower.name;
+      pb_Image.Image = (shower is Duschkabine) ? ÜberwachungNotfalldusche.Properties.Resources.duschkabine : ÜberwachungNotfalldusche.Properties.Resources.standdusche;
+      updateShowerstatus();
+    }
+
+    /// <summary>
+    /// Aktualisiert alle Werte auf dem GUI welche sich regelmässig ändern können
+    /// </summary>
+    public void updateShowerstatus()
+    {
+      lbl_Wassertemperatur.Text = shower.wassertemperatur.ToString();
+    }
+
+    /// <summary>
+    /// Aufruf des Testes. Es wird der selbe Test aufgerufen ob für eine oder mehrere Duschen. 
+    /// </summary>
+    /// <param name="shower">Liste von Duschen</param>
+    public void showShowerTest()
+    {
+      Testansicht tests = new Testansicht(shower);
+      tests.Show();
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
+    // Listener-Events                                                          //
+    //////////////////////////////////////////////////////////////////////////////
+
+    private void refreshTimer_Tick(object sender, EventArgs e)
+    {
+      updateShowerstatus();
+    }
+
+    private void btn_test_Click(object sender, EventArgs e)
+    {
+      showShowerTest();
+    }
+  }
 }
