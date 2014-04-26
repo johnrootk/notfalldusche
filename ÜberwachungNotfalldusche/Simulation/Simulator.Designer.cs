@@ -492,6 +492,7 @@
       this.ckErreichbarkeit.Size = new System.Drawing.Size(15, 14);
       this.ckErreichbarkeit.TabIndex = 6;
       this.ckErreichbarkeit.UseVisualStyleBackColor = true;
+      this.ckErreichbarkeit.CheckedChanged += new System.EventHandler(this.ckErreichbarkeit_CheckedChanged);
       // 
       // lbl_Erreichbarkeit
       // 

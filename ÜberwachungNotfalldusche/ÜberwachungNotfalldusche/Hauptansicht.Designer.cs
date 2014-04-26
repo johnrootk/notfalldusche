@@ -53,7 +53,7 @@
       this.listview_showers.OwnerDraw = true;
       this.listview_showers.Size = new System.Drawing.Size(633, 347);
       this.listview_showers.TabIndex = 0;
-      this.listview_showers.TileSize = new System.Drawing.Size(150, 400);
+      this.listview_showers.TileSize = new System.Drawing.Size(150, 360);
       this.listview_showers.UseCompatibleStateImageBehavior = false;
       this.listview_showers.View = System.Windows.Forms.View.Tile;
       this.listview_showers.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listview_showers_DrawItem);

@@ -22,9 +22,9 @@ namespace ÜberwachungNotfalldusche
       Lightsensor
     }
 
-    Notfalldusche shower;
-    Type type;
-    DateTime time;
+    public Notfalldusche shower;
+    public Type type;
+    public DateTime time;
 
     public Warning(Notfalldusche shower, Type type)
     {

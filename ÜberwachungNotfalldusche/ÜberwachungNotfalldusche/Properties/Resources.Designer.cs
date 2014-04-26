@@ -63,6 +63,16 @@ namespace ÜberwachungNotfalldusche.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CheckSign {
+            get {
+                object obj = ResourceManager.GetObject("CheckSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Collapse {
             get {
                 object obj = ResourceManager.GetObject("Collapse", resourceCulture);
@@ -96,6 +106,16 @@ namespace ÜberwachungNotfalldusche.Properties {
         internal static System.Drawing.Bitmap standdusche {
             get {
                 object obj = ResourceManager.GetObject("standdusche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WarnSign {
+            get {
+                object obj = ResourceManager.GetObject("WarnSign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

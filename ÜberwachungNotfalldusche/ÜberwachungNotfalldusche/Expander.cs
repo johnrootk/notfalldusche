@@ -133,7 +133,7 @@ namespace ÜberwachungNotfalldusche
 
     #endregion
 
-    #region Priate fields
+    #region Private fields
 
     private Control header;
     private Control content;

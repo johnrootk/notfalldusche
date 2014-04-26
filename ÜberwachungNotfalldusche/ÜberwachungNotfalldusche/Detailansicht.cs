@@ -32,6 +32,16 @@ namespace ÜberwachungNotfalldusche
       lbl_Name.Text = shower.name;
       pb_Image.Image = (shower is Duschkabine) ? ÜberwachungNotfalldusche.Properties.Resources.duschkabine : ÜberwachungNotfalldusche.Properties.Resources.standdusche;
       updateShowerstatus();
+      if (!(shower is Duschkabine))
+      {
+        lbl_wasserstand.Visible = false;
+        val_tankwasserstand.Visible = false;
+        lbl_Tankwassertemp.Visible = false;
+        val_tankwassertemp.Visible = false;
+        lbl_umgebungstemperatur.Visible = false;
+        val_umgebungstemperatur.Visible = false;
+        lbl_lichtsensor.Visible = false;
+      }
     }
 
     /// <summary>
@@ -39,7 +49,20 @@ namespace ÜberwachungNotfalldusche
     /// </summary>
     public void updateShowerstatus()
     {
-      lbl_Wassertemperatur.Text = shower.wassertemperatur.ToString();
+      val_flussrate.Text = shower.flussrate.ToString() + " l/min";
+      val_wasserdruck.Text = shower.wasserdruck.ToString() + " P";
+      val_wassertemperatur.Text = shower.wassertemperatur.ToString() + " °C";
+      lbl_erreichbarkeit.Enabled = shower.erreichbarkeit;
+      lbl_schalteraugen.Enabled = shower.schalterAugendusche;
+      lbl_schalterdusche.Enabled = shower.schalterDusche;
+      if (shower is Duschkabine)
+      {
+        Duschkabine kab = (Duschkabine)shower;
+        val_tankwasserstand.Text = kab.wasserstand.ToString() + " %";
+        val_tankwassertemp.Text = kab.tankwassertemperatur.ToString() + " °C";
+        val_umgebungstemperatur.Text = kab.umgebungstemperatur.ToString() + " °C";
+        lbl_lichtsensor.Enabled = kab.lichtsensor;
+      }
     }
 
     /// <summary>

@@ -38,11 +38,12 @@
       // pl_testing
       // 
       this.pl_testing.AutoScroll = true;
-      this.pl_testing.AutoScrollMinSize = new System.Drawing.Size(200, 200);
+      this.pl_testing.AutoScrollMinSize = new System.Drawing.Size(300, 501);
+      this.pl_testing.AutoSize = true;
       this.pl_testing.Dock = System.Windows.Forms.DockStyle.Fill;
       this.pl_testing.Location = new System.Drawing.Point(0, 0);
       this.pl_testing.Name = "pl_testing";
-      this.pl_testing.Size = new System.Drawing.Size(497, 453);
+      this.pl_testing.Size = new System.Drawing.Size(680, 501);
       this.pl_testing.TabIndex = 0;
       // 
       // testWorker
@@ -53,16 +54,16 @@
       // 
       this.panel1.Controls.Add(this.btn_runTest);
       this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-      this.panel1.Location = new System.Drawing.Point(497, 0);
+      this.panel1.Location = new System.Drawing.Point(680, 0);
       this.panel1.Name = "panel1";
-      this.panel1.Size = new System.Drawing.Size(138, 453);
+      this.panel1.Size = new System.Drawing.Size(138, 501);
       this.panel1.TabIndex = 0;
       // 
       // btn_runTest
       // 
-      this.btn_runTest.Location = new System.Drawing.Point(31, 23);
+      this.btn_runTest.Location = new System.Drawing.Point(28, 25);
       this.btn_runTest.Name = "btn_runTest";
-      this.btn_runTest.Size = new System.Drawing.Size(75, 23);
+      this.btn_runTest.Size = new System.Drawing.Size(84, 23);
       this.btn_runTest.TabIndex = 0;
       this.btn_runTest.Text = "Tests starten";
       this.btn_runTest.UseVisualStyleBackColor = true;
@@ -72,13 +73,14 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(635, 453);
+      this.ClientSize = new System.Drawing.Size(818, 501);
       this.Controls.Add(this.pl_testing);
       this.Controls.Add(this.panel1);
       this.Name = "Testansicht";
       this.Text = "Testansicht";
       this.panel1.ResumeLayout(false);
       this.ResumeLayout(false);
+      this.PerformLayout();
 
     }
 

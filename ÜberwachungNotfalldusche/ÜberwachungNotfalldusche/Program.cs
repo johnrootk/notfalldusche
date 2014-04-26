@@ -6,17 +6,17 @@ using System.Windows.Forms;
 
 namespace ÜberwachungNotfalldusche
 {
-    static class Program
+  static class Program
+  {
+    /// <summary>
+    /// Der Haupteinstiegspunkt für die Anwendung.
+    /// </summary>
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hauptansicht());
-        }
+      Application.EnableVisualStyles();
+      Application.SetCompatibleTextRenderingDefault(false);
+      Application.Run(new Hauptansicht());
     }
+  }
 }
