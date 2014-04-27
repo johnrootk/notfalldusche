@@ -1,4 +1,10 @@
-﻿using System;
+﻿////-- Detailansicht.cs -- ///////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Hier werden alle Funktionen gelistet um die Detailansicht zu verwalten   //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

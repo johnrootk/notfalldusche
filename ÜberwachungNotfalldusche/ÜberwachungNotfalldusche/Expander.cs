@@ -1,4 +1,11 @@
-﻿using System;
+﻿////-- Expander.cs -- ////////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Die Expander-Klasse dient aus ausklappbarer Container für den Testinhalt.//
+// Sie wird dem Accordion als Inhalt zugewiesen.                            //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -12,22 +19,18 @@ namespace ÜberwachungNotfalldusche
 {
   public partial class Expander : UserControl
   {
+    public event EventHandler StateChanged;
+    public event CancelEventHandler StateChanging;
+    public bool Expanded { get; private set; }
+    private Control header;
+    private Control content;
+    private int contentHeight = 0;
+
     public Expander()
     {
       InitializeComponent();
       this.Expanded = true;
     }
-
-    #region Events
-
-    public event EventHandler StateChanged;
-    public event CancelEventHandler StateChanging;
-
-    #endregion
-
-    #region Properties
-
-    public bool Expanded { get; private set; }
 
     public Control Header
     {
@@ -62,10 +65,6 @@ namespace ÜberwachungNotfalldusche
         this.Controls.SetChildIndex(this.content, 0);
       }
     }
-
-    #endregion
-
-    #region Public methods
 
     public void Expand()
     {
@@ -117,10 +116,6 @@ namespace ÜberwachungNotfalldusche
         Expand();
     }
 
-    #endregion
-
-    #region Private methods
-
     private void ArrangeLayout()
     {
       int h = 0;
@@ -130,18 +125,11 @@ namespace ÜberwachungNotfalldusche
         h += this.content.Height;
       this.Size = new Size(this.Width, h);
     }
-
-    #endregion
-
-    #region Private fields
-
-    private Control header;
-    private Control content;
-    private int contentHeight = 0;
-
-    #endregion
   }
 
+  /// <summary>
+  /// Eine Helper-Klasse im Expander um den Header vereinfacht zu erstellen. 
+  /// </summary>
   public static class ExpanderHelper
   {
     public static Label CreateLabelHeader(Expander expander, string text, Color backColor, Image collapsedImage = null, Image expandedImage = null, int height = 25, Font font = null)
@@ -159,16 +147,12 @@ namespace ÜberwachungNotfalldusche
         headerLabel.ImageAlign = ContentAlignment.MiddleRight;
       }
       headerLabel.BackColor = backColor;
-
       if (collapsedImage != null && expandedImage != null)
       {
         expander.StateChanged += delegate { headerLabel.Image = expander.Expanded ? collapsedImage : expandedImage; };
       }
-
       headerLabel.Click += delegate { expander.Toggle(); };
-
       expander.Header = headerLabel;
-
       return headerLabel;
     }
   }

@@ -1,4 +1,12 @@
-﻿using System;
+﻿////-- Accordion.cs -- ///////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Diese Klasse definiert ein Accordion-Steuerelement.                      //
+// Dies wird genutzt um die Tests in einer übersichtlichen Form zu          //
+// präsentieren.                                                            //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

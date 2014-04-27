@@ -1,4 +1,10 @@
-﻿using System;
+﻿////-- Warning.cs -- /////////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Die speziellen Werte der Standdusche (Erbt von Notfalldusche)            //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

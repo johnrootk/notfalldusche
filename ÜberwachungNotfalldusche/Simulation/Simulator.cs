@@ -1,4 +1,10 @@
-﻿using System;
+﻿////-- Simulator.cs -- ///////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Dies ist die Ansicht des Simulators. Hier werden alle Events definiert   //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +39,16 @@ namespace Simulation
       return notfallduschen;
     }
 
+    private void aktualisiereDuschenliste()
+    {
+      lb_duschenliste.Items.Clear();
+      lb_duschenliste.Items.AddRange(notfallduschen.ToArray());
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
+    // Listener-Events                                                          //
+    //////////////////////////////////////////////////////////////////////////////
+
     private void btn_standdusche_Click(object sender, EventArgs e)
     {
       notfallduschen.Add(new Standdusche());
@@ -51,12 +67,6 @@ namespace Simulation
       aktualisiereDuschenliste();
       lb_duschenliste.SelectedIndex = -1;
       pl_einstellungen.Visible = false;
-    }
-
-    private void aktualisiereDuschenliste()
-    {
-      lb_duschenliste.Items.Clear();
-      lb_duschenliste.Items.AddRange(notfallduschen.ToArray());
     }
 
     private void lb_duschenliste_SelectedIndexChanged(object sender, EventArgs e)

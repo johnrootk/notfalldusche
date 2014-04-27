@@ -1,4 +1,10 @@
-﻿using Simulation;
+﻿////-- Warning.cs -- /////////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Diese Klasse definiert das Warning-Objekt mit seinen Werten              //
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using Simulation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,11 +39,20 @@ namespace ÜberwachungNotfalldusche
       this.time = DateTime.Now;
     }
 
+    /// <summary>
+    /// Vergleich zweier Warnungen aufgrund des Types und der Dusche
+    /// </summary>
+    /// <param name="w">zweite Warnung</param>
+    /// <returns>bool ob sie gleich sind</returns>
     public bool isSameWarning(Warning w)
     {
       return (w.shower == this.shower && w.type == this.type);
     }
 
+    /// <summary>
+    /// Gibt einen String zurück besierend auf dem Typ der Warnung
+    /// </summary>
+    /// <returns>string der Warnung</returns>
     public string printWarning()
     {
       switch(type){
@@ -64,6 +79,10 @@ namespace ÜberwachungNotfalldusche
       }
     }
 
+    /// <summary>
+    /// Überschreibung der ToString-Methode um eine Warnung als string auszugeben
+    /// </summary>
+    /// <returns>string der gesamten Warnung</returns>
     public override string ToString()
     {
       return time + "\t" + shower.name + "\t-\t" + printWarning();

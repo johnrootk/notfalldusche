@@ -1,4 +1,10 @@
-﻿using System;
+﻿////-- Warning.cs -- /////////////////////////////////////////////////////////
+// Projekt-Notfalldusche 2014                                               //
+// Die Notfalldusche-Klasse, welche die Werte definiert, die jede Dusche hat//
+// von Kevin Morgenthaler, Kjell Ita, Ramon Boss                            //
+//////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +14,7 @@ namespace Simulation
 {
   public abstract class Notfalldusche
   {
-    public Random rand;
+    public static Random rand = new Random();
     public string name;
     public double flussrate;
     public double wasserdruck;
@@ -22,7 +28,6 @@ namespace Simulation
 
     public Notfalldusche()
     {
-      rand = new Random();
       flussrate = 60;
       wasserdruck = 2;
       wassertemperatur = 20;
